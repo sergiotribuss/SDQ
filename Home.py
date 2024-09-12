@@ -22,7 +22,7 @@ with st.container():
     col3, col4 = st.columns(2)
 
     cpfCliente = col1.text_input(label="Informe o CPF")
-    col2.text = "Nome do Cliente"
+    #col2.text = "Nome do Cliente"
     btnFilter = col3.button(label="Pesquisa")
 
     # -- Display Coupom Balance
@@ -46,7 +46,4 @@ with st.container():
 
             df = pd.DataFrame(data,columns=cursor.column_names)
 
-            df
-
-
-
+            st.dataframe(df)
